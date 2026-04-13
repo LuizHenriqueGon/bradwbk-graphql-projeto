@@ -63,7 +63,7 @@ mvn spring-boot:run
 A aplicação estará disponível em: http://localhost:8080/graphql.
 ```
 👨‍💻 Autor
-Desenvolvido por Seu Nome
+Desenvolvido por LuizHenriqueGon
 Estudante de Análise e Desenvolvimento de Sistemas
 
 
