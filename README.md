@@ -50,7 +50,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 ### 1. Clonar e Instalar Dependências
 ```bash
 # Clone o repositório
-git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+git clone https://github.com/LuizHenriqueGon/bradwbk-graphql-projeto.git
 
 # Entre no diretório
 cd seu-repositorio
