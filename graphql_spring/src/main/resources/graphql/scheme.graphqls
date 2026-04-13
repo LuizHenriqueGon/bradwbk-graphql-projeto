@@ -1,0 +1,51 @@
+# Definição do Schema conforme os exercícios
+
+enum Episode {
+    NEWHOPE
+    EMPIRE
+    JEDI
+}
+
+interface Character {
+    id: ID!
+    name: String!
+    appearsIn: [Episode]!
+    friends: [Character]
+}
+
+type Human implements Character {
+    id: ID!
+    name: String!
+    appearsIn: [Episode]!
+    friends: [Character]
+    height: Float
+}
+
+type Droid implements Character {
+    id: ID!
+    name: String!
+    appearsIn: [Episode]!
+    friends: [Character]
+    primaryFunction: String
+}
+
+type Starship {
+    id: ID!
+    name: String!
+    length: Float
+}
+
+type Query {
+    # Novas Queries (Pág. 40)
+    humans: [Human!]!                            # Buscar todos os humanos [cite: 1145]
+    starships: [Starship!]!                      # Buscar todas as naves [cite: 1145]
+    character(id: ID!): Character                # Buscar por ID genérico [cite: 1146]
+}
+
+type Mutation {
+    # Novas Mutations (Pág. 41)
+    createHuman(id: ID!, name: String!, height: Float): Human                     # Criar Humano [cite: 1151]
+    createDroid(id: ID!, name: String!, primaryFunction: String): Droid           # Criar Droid [cite: 1152]
+    createStarship(id: ID!, name: String!, length: Float): Starship               # Criar Nave [cite: 1153]
+    addFriend(characterId: ID!, friendId: ID!): Character                         # Adicionar amigo [cite: 1159]
+}
